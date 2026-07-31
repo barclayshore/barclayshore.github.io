@@ -1,17 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Open in Browser</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        line-height: 1.6;
+        text-align: center;
+    }
+    .container {
+        margin-top: 40px;
+    }
+    .instructions {
+        font-size: 18px;
+        color: #333;
+    }
+</style>
 <script>
-var ua = navigator.userAgent.toLowerCase();
-var isWeChat = ua.indexOf("micromessenger") !== -1;
-var target = "https://youtu.be/U944W6U6scc?si=dg_IAvko0b3crdbu";
-if (!isWeChat) window.location.href = target;
+    // Detect WeChat internal browser
+    var ua = navigator.userAgent.toLowerCase();
+    var isWeChat = ua.indexOf("micromessenger") !== -1;
+
+    // Your YouTube target link
+    var target = "https://youtu.be/U944W6U6scc?si=dg_IAvko0b3crdbu";
+
+    if (!isWeChat) {
+        // Safe to redirect
+        window.location.href = target;
+    }
 </script>
 </head>
 <body>
-<h2>Please open in browser</h2>
-<p>Tap ⋯ → Open in Browser</p>
+<div class="container">
+    <h2>Open in Browser to Continue</h2>
+    <p class="instructions">
+        To watch, like, and subscribe on YouTube,<br>
+        please open this page in your browser.
+    </p>
+    <p class="instructions">
+        In WeChat: tap the <strong>⋯</strong> in the top-right corner,<br>
+        then choose <strong>“Open in Browser”</strong>.
+    </p>
+</div>
 </body>
 </html>
