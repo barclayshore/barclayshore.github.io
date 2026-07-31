@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Open in Browser</title>
+<script>
+var ua = navigator.userAgent.toLowerCase();
+var isWeChat = ua.indexOf("micromessenger") !== -1;
+var target = "https://youtu.be/U944W6U6scc?si=dg_IAvko0b3crdbu";
+if (!isWeChat) window.location.href = target;
+</script>
+</head>
+<body>
+<h2>Please open in browser</h2>
+<p>Tap ⋯ → Open in Browser</p>
+</body>
+</html>
